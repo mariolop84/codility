@@ -1,7 +1,9 @@
 package es.codify.principal;
 
 import es.codify.CyclicRotation.SolutionCyclicRotation;
+import es.codify.FrogJmp.FrogJmp;
 import es.codify.OddOccurrencesInArray.OddOccurrencesInArray;
+import es.codify.PermMissingElem.PermMissingElem;
 import es.codify.TapeEquilibrium.TapeEquilibrium;
 import es.codify.binaryGap.SolutionBinaryGap;
 
@@ -20,10 +22,15 @@ public class Principal {
 		System.out.println(oc.solution(A));*/
 		
 		//int[] A = {3,1,2,4,3};
-		int A[] ={-1000,1000};
-		TapeEquilibrium te = new TapeEquilibrium();
-		System.out.println(te.solution(A));
-			
+		/*int A[] ={-1000,1000};
+		TapeEquilibrium te = new TapeEquilibrium();*/
+		
+		/*FrogJmp fj = new FrogJmp();
+		System.out.println(fj.solution(10, 85, 30));*/
+		
+		int A[] = {2};
+		PermMissingElem p = new PermMissingElem();
+		System.out.println(p.solution(A));
 		
 	}
 
