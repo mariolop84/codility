@@ -1,27 +1,25 @@
 package es.codify.TapeEquilibrium;
 
-import java.util.Arrays;
-
 public class TapeEquilibrium {
 	public int solution(int[] A) {
-		
-		long sumright = 0;
-	    long sumleft = 0;
-	    long ans;
+		int r = 0;
+		int min = 0;
 
-	    for (int i =1;i<A.length;i++)
-	        sumright += A[i];
+		for (int i = 0; i < A.length; i++) {
+			r += A[i];
+			min += Math.abs(A[i]);
+		}
 
-	    sumleft = A[0];
-	    ans =Math.abs(sumright+sumleft);
+		int l = 0;
 
-	    for (int P=1; P<A.length; P++)
-	    {
-	        if (Math.abs(sumleft - sumright)<ans)
-	            ans = Math.abs(sumleft - sumright);
-	        sumleft += A[P];
-	        sumright -=A[P];
-	    }
-	    return (int) ans;  
+		for (int P = 0; P < A.length - 1; P++) {
+			r -= A[P];
+			l += A[P];
+
+			if ((Math.abs(l - r)) < min) {
+				min = Math.abs(l - r);
+			}
+		}
+		return min;
 	}
 }
