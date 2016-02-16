@@ -5,6 +5,7 @@ public class SolutionBinaryGap {
 	public int solution(int N) {
 		String numBin = "" + Integer.toBinaryString(N);
 		int lastZero = numBin.lastIndexOf("0")+1;
+		
 		String[] lstBin = numBin.split("1");
 		
 		if(lastZero==numBin.length())
